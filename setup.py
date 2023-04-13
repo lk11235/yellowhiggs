@@ -20,7 +20,7 @@ from glob import glob
 execfile('yellowhiggs/info.py')
 
 if 'install' in sys.argv:
-    print __doc__
+    print(__doc__)
 
 setup(
     name='yellowhiggs',
