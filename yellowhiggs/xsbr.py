@@ -132,7 +132,7 @@ def _read_br_file(filename):
         else:
             try:
                 line = map(float, line)
-            except ValueError, e:
+            except ValueError as e:
                 raise ValueError("line not understood: %s\n%s" % (line, e))
             for channel, value in zip(channels, line[1:]):
                 if channel[:1] in ['+', '-']:
