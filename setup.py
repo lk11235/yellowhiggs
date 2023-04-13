@@ -17,7 +17,8 @@ except ImportError:
 import sys
 from glob import glob
 
-execfile('yellowhiggs/info.py')
+#execfile('yellowhiggs/info.py')
+exec(open("yellowhiggs/info.py").read())
 
 if 'install' in sys.argv:
     print(__doc__)
