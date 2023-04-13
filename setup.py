@@ -18,7 +18,7 @@ import sys
 from glob import glob
 
 #execfile('yellowhiggs/info.py')
-exec(open("yellowhiggs/info.py").read())
+exec(open("yellowhiggs/info.py", "rt").read())
 
 if 'install' in sys.argv:
     print(__doc__)
