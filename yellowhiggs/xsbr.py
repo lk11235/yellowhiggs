@@ -27,7 +27,7 @@ def _read_xs_file(filename):
             mass, xs_mean, \
             error_high_scale, error_low_scale, \
             error_high_pdf, error_low_pdf = map(abs, map(float, line[:6]))
-        except ValueError, e:
+        except ValueError as e:
             raise ValueError("line not understood: %s\n%s" % (line, e))
 
         # linear combination of errors
@@ -91,7 +91,7 @@ def _read_width_file(filename):
         try:
             mass, width_mean, \
             error_high, error_low = map(abs, map(float, line[:4]))
-        except ValueError, e:
+        except ValueError as e:
             raise ValueError("line not understood: %s\n%s" % (line, e))
 
         info = {}
